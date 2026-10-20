@@ -1,0 +1,389 @@
+---
+language:
+  - en
+tags:
+  - skill
+  - agent-skill
+  - imprint
+  - claude-code
+  - codex
+  - cursor
+  - copilot
+  - gemini
+  - hermes
+  - hermes-agent
+  - windsurf
+  - memory
+  - compression
+  - ai-collaboration
+  - portable-profile
+license: mit
+---
+
+<div align="center">
+
+<img src="https://raw.githubusercontent.com/ilang-ai/Imprint/main/imprint-banner.png" alt="Imprint, your working imprint, portable across every agent." width="100%"/>
+
+# Imprint
+
+### *Your working imprint, portable across every agent.*
+
+[![License](https://img.shields.io/badge/License-MIT-1e3a8a?style=for-the-badge)](LICENSE)
+[![Version](https://img.shields.io/badge/version-2.3-d4a858?style=for-the-badge)](#changelog)
+[![Skill Standard](https://img.shields.io/badge/SKILL.md-compatible-0b0f1a?style=for-the-badge&labelColor=d4a858)](https://github.com/ilang-ai/Imprint)
+[![Agents](https://img.shields.io/badge/11%20agents-compatible-0b0f1a?style=for-the-badge)](https://github.com/ilang-ai/Imprint#compatibility)
+[![iLang L0](https://img.shields.io/badge/iLang-L0_Compatible-d4a858?style=for-the-badge)](https://github.com/ilang-ai/ilang-spec)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22865141.svg)](https://doi.org/10.5281/zenodo.22865141)
+
+</div>
+
+---
+
+> **Imprint**, *verb.* To stamp a mark that cannot be erased.
+> *noun.* The mark itself, permanent, portable, unmistakably yours.
+>
+> In ethology, *imprinting* is the moment a young animal learns, once and
+> forever, who it belongs to. In printing, an *imprint* is the publisher's
+> signature pressed into every page. In both meanings, something is **marked
+> at its core**, and that mark travels with it.
+>
+> This project is that mark, for human-AI work.
+
+---
+
+## What this is
+
+**Imprint** does two things. It captures **how *you* work**, and it brings
+**judgment** to how it acts on your behalf: when to just do it, when to check
+with you first, when the project's rules should win over your defaults. Both
+travel across every AI agent you use.
+
+Built on iLang, the first protocol to formally map Greek mathematical symbols (Σ, Δ, φ, λ, Ω, ∇, μ, Π, ψ, ξ, ζ, θ, ∂) as primitive verbs for AI-to-AI communication, and the first to define a computable vector space for AI judgment (11 dimensions, 4 axioms, fuzzy-mathematical foundation).
+
+On first run, the skill has a short conversation with you. **Not about your
+project, about you.** How you debug, how you plan, how you write commits,
+what you've shipped, what went wrong, what you prefer.
+
+That conversation becomes a **portable profile**, a working imprint, stored
+alongside your code. Under 500 tokens. Structured. Readable. Yours.
+
+Every session after that, the skill applies your imprint automatically:
+your code style, your review standards, your planning rhythm, your design
+taste, your git habits. Portable across any SKILL.md-compatible agent.
+
+**And it knows when to act.** Ordinary work just happens. But when something is
+hard to undo, or your own rules collide with the project's, Imprint weighs it the
+way *you* would and picks how to proceed: go ahead, confirm first, advise, or stop
+at a line you drew. Same action, different call for different people and projects.
+This judgment layer follows the iLang v5.0 vector protocol, and you never see its
+internals, only the behavior. Nothing runs on a hidden timer: every decision is made
+in the moment it acts, from what is true right then.
+
+**Switch models. Switch platforms. Switch teams. Your imprint comes with you.**
+
+---
+
+## Install
+
+### Claude Code (recommended)
+
+```
+/install imprint
+```
+
+[View on Claude Code Marketplace](https://platform.claude.com/plugins/imprint)
+
+### Any SKILL.md-compatible agent (universal)
+
+Copy `skills/imprint/SKILL.md` into your agent's skills directory. Works with Claude Code, Cursor, Copilot, Windsurf, Trae, Cline, Roo, and any agent that reads SKILL.md files.
+
+```bash
+git clone https://github.com/ilang-ai/Imprint.git
+cp Imprint/skills/imprint/SKILL.md ~/.claude/skills/imprint/SKILL.md
+```
+
+Replace `~/.claude/skills/` with your agent's skills path.
+
+### Hermes Agent
+
+```bash
+hermes skills install ilang-ai/Imprint
+```
+
+### Cursor
+
+Browse and install from [Cursor Directory](https://cursor.directory/plugins/imprint).
+
+### VS Code / VS Code forks
+
+Search "Imprint" in the Extensions panel, or:
+
+- [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=ILang.imprint)
+- [Open VSX](https://open-vsx.org/extension/ILang/imprint)
+- [Open VSX](https://open-vsx.org/extension/ILang/imprint)
+
+The VS Code extension auto-installs SKILL.md to 14 agent directories on your machine.
+
+---
+
+## What It Overlaps With
+
+Imprint covers ground that these skills address individually. Not a drop-in replacement for all of them, but a single file that handles the common cases.
+
+| Instead of installing...      | Imprint covers this by                                                       |
+| :--------------------------- | :--------------------------------------------------------------------------- |
+| `claude-mem` (memory)        | Stores **how you work**, not what happened.                                  |
+| `Caveman` (compression)      | Structured format is the default, not a mode.                                |
+| `onboard`                    | Project context extraction on first run.                                     |
+| Code-review skills           | Review against **your** standards, not universal rules.                      |
+| `systematic-debugging`       | Architecture first, then binary search. Lessons become immunity.             |
+| `superpowers` (planning)     | Your rhythm, not a fixed methodology.                                        |
+| Progress-tracking skills     | Auto-checkpoint on meaningful state changes.                                 |
+| TDD skills                   | Resources decide strategy, multi-model or single, auto-adapts.               |
+| Git-workflow skills          | Searchable commits, README as landing page when discoverability is on.       |
+| `seo-audit`                  | Structured output is more parseable by AI search engines.                    |
+| Copywriting skills           | Tone, terminology, and rhythm derived from your imprint.                     |
+
+**One file. Eleven capability areas. Depth varies by area.**
+
+---
+
+## Compatibility
+
+<div align="center">
+
+| Agent           | Status       | Install                              |
+| :-------------- | :----------: | :----------------------------------- |
+| **Hermes**      | native       | `hermes skills install ilang-ai/Imprint` |
+| **VS Code**     | extension    | [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=ILang.imprint) |
+| **Claude Code** | marketplace  | `/install imprint`                   |
+| **Cursor**      | directory    | [Cursor Directory](https://cursor.directory/plugins/imprint) |
+| **Codex CLI**   | SKILL.md     | copy to `~/.codex/skills/imprint/`   |
+| **Copilot**     | SKILL.md     | copy to `~/.github/skills/imprint/`  |
+| **Gemini CLI**  | SKILL.md     | copy to `~/.gemini/extensions/imprint/skills/imprint/` |
+| **Windsurf**    | SKILL.md     | copy to `~/.windsurf/skills/imprint/`|
+| **Trae**        | SKILL.md     | copy to `~/.trae/skills/imprint/`    |
+| **Cline**       | SKILL.md     | copy to `~/.cline/skills/imprint/`   |
+| **Roo**         | SKILL.md     | copy to `~/.roo/skills/imprint/`     |
+
+</div>
+
+**native** = one-command install from the platform's skill registry. **directory** = listed in the platform's plugin directory. **extension** = VS Code extension with auto-install to 14 agent directories. **SKILL.md** = copy the file to the agent's skills directory.
+
+---
+
+## Your imprint is yours
+
+The imprint is a **plain text file** sitting next to your code. You own it.
+
+- **Read** it, no black box, no vendor cache
+- **Edit** it, nudge a preference, commit the change
+- **Version** it, it's just git
+- **Share** it, hand it to a teammate, they inherit your working style
+- **Port** it, every SKILL.md agent speaks the same file
+
+Switch tools, the imprint comes with you. No lock-in. Ever.
+
+---
+
+## Schema at a glance
+
+```text
+META        schema version, timestamps, session count
+CORE        global behavioral genes with confidence and scope
+  GENE      traits (T:) and anti-patterns (A:), conditional via when:
+FACT        verifiable environment data (stack, deploy target, model access)
+PROJECT     repo-specific overrides, stack, constraints, mismatches
+LESSONS     cross-project traps, accumulated from real experience
+PROGRESS    milestone-only checkpoints, auto-summarized every 10 entries
+RUNTIME     current mode settings (transparency, speed, compression)
+DECAY       lifecycle rules for tentative genes and inactive projects
+```
+
+Core imprint stays under 500 tokens. Project and progress layers can grow.
+
+---
+
+## Example: real .dna.md
+
+This is what an actual profile looks like after a few sessions:
+
+```
+::DNA{user}
+::META{schema:2.0|updated:2026-04-18|sessions:5}
+
+::CORE{
+  ::CONTEXT{role:fullstack_dev|experience:4yr|model_access:2|discoverability:yes}
+
+  ::GENE{style|conf:confirmed|scope:global}
+    T:conclusions_first
+    T:minimal_output|when:task_simple
+    T:full_detail|when:task_complex
+    A:verbose_without_signal⇒waste
+
+  ::GENE{planning|conf:confirmed|scope:global}
+    T:build_first_plan_later
+    A:monolithic_spec⇒reject
+
+  ::GENE{debug|conf:4/5|scope:global}
+    T:check_architecture_before_code
+    A:guess_from_error_message⇒wrong_direction
+}
+
+::FACT{
+  ::ITEM{key:preferred_stack|value:react,node|conf:confirmed}
+  ::ITEM{key:models_used|value:claude,gpt|conf:confirmed}
+}
+
+::PROJECT{repo:my-saas}
+  ::STACK{frontend:next.js|backend:node|db:postgres}
+  ::CONSTRAINT{auth:clerk|deploy:vercel}
+}
+
+::LESSONS{
+  ::LESSON{id:middleware_order_matters|type:debug|scope:project|conf:confirmed}
+  ::LESSON{id:always_check_env_vars_first|type:deploy|scope:cross_project|conf:3/5}
+}
+
+::PROGRESS{
+  ::ITEM{date:2026-04-18|done:auth_flow|learned:clerk_webhook_needs_raw_body|next:stripe_integration}
+}
+
+::RUNTIME{transparency:quiet|speed:balanced|compression:structured_default}
+::DECAY{tentative_unseen_30d=>remove|repeated_3x=>confirm|progress_10_items=>summarize}
+::END{DNA}
+```
+
+Carries code style, debugging approach, project context, lessons, and progress across every session and every agent.
+
+---
+
+## Preset Templates
+
+Drop-in `.dna.md` presets for common workflows. Use as-is, or paste their genes into your existing profile.
+
+| Template | What it does | Based on |
+|----------|-------------|----------|
+| [karpathy-mode](./templates/karpathy-mode.dna.md) | Don't assume. Minimal code. Don't touch what you don't understand. Goal-driven execution. | [Andrej Karpathy's coding observations](https://x.com/karpathy) |
+
+**Why these are better than a CLAUDE.md:**
+
+A markdown rules file says "don't overcomplicate code." An Imprint gene says:
+
+```
+::GENE{minimal_code|conf:confirmed|scope:global}
+  T:minimum_code_that_solves_the_problem
+  T:if_200_lines_could_be_50⇒rewrite
+  A:bloated_abstraction⇒maintenance_burden⇒reject
+  A:1000_lines_when_100_would_do⇒rewrite_before_submit
+```
+
+The difference: anti-patterns with consequence chains, confidence levels that evolve, conflict resolution when rules contradict, and composability with your own genes. Rules tell AI what to do. Genes teach AI how to think.
+
+Want to contribute a template? See [Contributing](#contributing).
+
+---
+
+## Changelog
+
+### v2.3.0 (2026-07-03)
+- **Judgment layer (iLang v5.0).** Imprint now decides *how* to act, not just what you prefer: execute, confirm first, advise, defer, or stop at a line you set. Ordinary work takes a zero-latency fast path; only hard-to-undo actions and real conflicts escalate to full vector judgment. The judgment is relative — the same action resolves differently for different users and projects. Internals never surfaced to the user.
+- **User-set boundaries.** Optional `::JUDGE{::BOUNDARY{}}` lines are hard stops that override every other signal.
+- **Honesty pass.** Removed automation the skill cannot actually run (no hidden timers or counters). Every profile update now happens in the moment the skill reads or writes the file, from present evidence — the same principle behind iLang v5.0.
+- **Converged positioning.** Working-style engine first; discoverability/SEO is now an explicit optional mode, not a co-equal headline promise.
+- Version aligned to 2.3.0 across SKILL, all manifests, and marketplace entries. Marketplace descriptions added. Validator: zero warnings.
+
+
+### v2.2 (2026-06-05)
+- **Add** `templates/` directory with preset `.dna.md` files
+- **Add** karpathy-mode template: 4 Karpathy coding principles as Imprint genes
+- **Add** conflict resolution rules for karpathy genes vs user overrides
+
+### v2.1 (2026-04-19)
+- **Add** Hermes Agent compatibility: native install via `hermes skills install ilang-ai/Imprint`
+- **Add** agentskills.io-compatible frontmatter (version, author, metadata.hermes.tags)
+- **Update** compatibility table and install docs
+
+### v2.0 (2026-04-18)
+- **Schema 2.0**: CORE/PROJECT layered separation. Global genes no longer mix with project overrides.
+- **Conditional genes**: `T:minimal|when:simple` + `T:full_detail|when:complex`. Context-dependent behavior.
+- **Five conflict types**: user vs history, global vs project, two confirmed contradicting, multi-agent disagreement, lesson vs task. Each with explicit resolution.
+- **Progress compression**: auto-summarize every 10 entries, keep file lean.
+- **User transparency**: quiet/explain/audit three modes, natural switching.
+- **Reflexion reframed**: part of the thinking process, not an extra API call. Zero visible latency.
+- **Context drift protection**: re-read profile before major decisions in long sessions.
+- **Team override**: project linter and team style rules always override personal genes.
+- **Speed mode**: `RUNTIME{speed:fast}` skips reflexion for latency-sensitive work.
+- **Version sync**: all manifests aligned to 2.0.0.
+
+### v1.5 (2026-04-18)
+- **Add** reflexion loop for single-model code review: AI self-critiques and fixes its own output before presenting to user
+- **Improve** code review no longer uses a static checklist, now runs an active self-correction cycle checking against user's profile and lessons
+
+### v1.4 (2026-04-18)
+- **Rebrand** from all-in-one to Imprint
+- **Add** Imprint design assets: banner, logo, social preview
+- **Add** `.cursor-plugin/` for Cursor Marketplace compatibility
+- **Add** `.claude-plugin/marketplace.json` for self-distribution
+- **Submit** to Claude Code official marketplace and Cursor Marketplace
+
+### v1.3 (2026-04-18)
+- **Add** plugin manifest (`.claude-plugin/plugin.json`) for official marketplace
+- **Move** SKILL.md to `skills/imprint/SKILL.md` per plugin spec
+- **Update** install instructions for plugin format
+
+### v1.2 (2026-04-18)
+- **Fix** enforce *one question per message* with explicit forbidden/correct examples
+- **Fix** platform memory cache no longer bypasses onboarding
+- **Improve** Rule 1 and Rule 2 promoted to top-level critical rules
+- **Improve** onboarding wrap-up phrasing more natural
+
+### v1.1 (2026-04-18)
+- **Fix** onboarding now asks one question at a time (was dumping 4-6 at once)
+- **Fix** never expose internal terminology to user
+- **Add** activation rules with auto-trigger on session start
+- **Add** conflict resolution, mutation, decay, priority rules
+- **Add** upgraded schema with META / FACT / PROJECT / PROGRESS / RUNTIME layers
+
+### v1.0 (2026-04-18)
+- Initial release
+
+---
+
+## Contributing
+
+Issues and PRs welcome. Keep the imprint under 500 tokens and the file
+human-readable, those are the two hard constraints.
+
+---
+
+## Links
+
+- [ilang.ai](https://ilang.ai)
+- [GitHub](https://github.com/ilang-ai/Imprint)
+- [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=ILang.imprint)
+- [Open VSX](https://open-vsx.org/extension/ILang/imprint)
+- [Cursor Directory](https://cursor.directory/plugins/imprint)
+- [skills.sh](https://skills.sh/ilang-ai/Imprint/imprint)
+- [Hugging Face](https://huggingface.co/datasets/i-Lang/Imprint)
+- [iLang spec](https://github.com/ilang-ai/ilang-spec)
+
+---
+
+## Citation
+
+[CITATION.cff](CITATION.cff); Zenodo archives each release. Concept DOI [10.5281/zenodo.22865141](https://doi.org/10.5281/zenodo.22865141) (all versions).
+
+## License
+
+MIT License. 2026 iLang Inc. / Palm Media Technology / Canada.
+
+---
+
+<div align="center">
+
+**Powered by the [iLang v4.0 Protocol](https://ilang.ai)**, an open standard for human-AI communication.
+
+*Published by Claude (automated)*
+
+</div>
